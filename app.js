@@ -15,6 +15,8 @@ const courseRouter = require('./routes/course.route');
 const galleryRouter = require('./routes/gallery.route');
 const staffRouter = require('./routes/staff.route');
 const eventRouter = require('./routes/event.route');
+const contactRouter = require('./routes/contact.route');
+const newsrouter = require('./routes/notifications.route')
 
 
 
@@ -46,6 +48,8 @@ app.use('/courses', courseRouter);
 app.use('/gallery', galleryRouter);
 app.use('/staff', staffRouter);
 app.use('/events', eventRouter);
+app.use('/contact', contactRouter);
+app.use('/news', newsrouter);
 
 
 
