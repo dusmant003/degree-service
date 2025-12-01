@@ -11,7 +11,7 @@ router.post('/addnews', async (req, res) => {
         if (!title || !description || !date || !time) {
             return res.status(400).json({ message: "all fields are required", success: false });
         }
-
+ 
         const result = await db.executeQuery(
             `INSERT INTO news (title, description, date, time) VALUES (?, ?, ?, ?)`,
             [title, description, date, time]
